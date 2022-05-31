@@ -13,12 +13,13 @@ struct MDText: View {
             .font(.system(size: 40, weight: .black, design: .default))
             .foregroundColor(.white)
             .kerning(-2)
+            .shadow(radius: 5)
     }
 }
 
 struct MDText_Previews: PreviewProvider {
     static var previews: some View {
         MDText()
-            .background(.gray)
+            .background(.white)
     }
 }

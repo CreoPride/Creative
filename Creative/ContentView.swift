@@ -21,11 +21,11 @@ struct ContentView: View {
                         .shadow(color: .black, radius: 5, x: 5, y: 5)
                         .frame(width: 250, height: 300)
                         .rotation3DEffect(
-                            .degrees(buttonTaped ? 720 : 0),
+                            .degrees(buttonTaped ? 540 : 0),
                             axis: (x: 0, y: 1, z: 0)
                         )
                         .scaleEffect(buttonTaped ? 1 : 0)
-                        .animation(.easeInOut(duration: 2), value: buttonTaped)
+                        .animation(.easeOut(duration: 3.5), value: buttonTaped)
 
                     MDText().offset(x: 40, y: 40)
                         .offset(x: buttonTaped ? 0 : 500, y: 0)
@@ -35,9 +35,9 @@ struct ContentView: View {
                         )
                         .animation(
                             .interpolatingSpring(
-                                mass: 8,
+                                mass: 3,
                                 stiffness: 15,
-                                damping: 20,
+                                damping: 18,
                                 initialVelocity: 1
                             ),
                             value: buttonTaped)
